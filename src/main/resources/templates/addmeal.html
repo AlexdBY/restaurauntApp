@@ -1,0 +1,47 @@
+<html>
+<head>
+    <title>Add meal</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="//code.angularjs.org/1.2.20/angular-sanitize.min.js"></script>
+</head>
+
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<body ng-app="addMeal">
+
+<div class="container" ng-controller="addMealCtrl">
+    <div class="header clearfix">
+        <nav>
+            <ul class="nav nav-pills pull-right">
+                <li role="presentation"><a href="/admin">Актуальные заказы</a></li>
+                <li role="presentation" class="active"><a href="#">Добавить товар</a></li>
+                <li role="presentation"><a href="/editmeal">Редактировать товары</a></li>
+                <li role="presentation"><a href="/adminmenu">Меню</a></li>
+                <li role="presentation"><a href="/">Сменить пользователя</a></li>
+            </ul>
+        </nav>
+        <h3 class="text-muted">{{CustomString}}</h3>
+    </div>
+<form class="form-signin">
+    <h2 class="form-signin-heading">Добавление товара</h2>
+    <label for="inputMealPhoto" class="sr-only">Фото товара</label>
+    <input ng-model="src.mealPhoto" id="inputMealPhoto" class="form-control" placeholder="Введите путь к фото" required>
+    <label for="inputMealName" class="sr-only">Наименование товара</label>
+    <input ng-model="src.mealName" id="inputMealName" class="form-control" placeholder="Наименование товара" required>
+    <label for="inputPrice" class="sr-only" >Цена товара</label>
+    <input id="inputPrice" class="form-control"  ng-model="src.price" placeholder="Цена товара" required>
+    <label for="inputDescription" class="sr-only" >Описание товара</label>
+    <input id="inputDescription" class="form-control"  ng-model="src.description" placeholder="Описание товара" required>
+    <div class="btn btn-lg btn-success btn-block" ng-click="addMeal()">Добавить товар</div>
+</form>
+</div>
+
+<script src="js/addmeal.js"></script>
+</body>
+</html>

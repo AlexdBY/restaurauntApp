@@ -1,0 +1,116 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800&subset=cyrillic-ext,latin);
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Open Sans', sans-serif;
+}
+html {
+	overflow-x:  hidden;
+}
+a {
+	text-decoration: none !important;
+	color: #6a6a6a;
+	-webkit-transition: 0.3s;
+     -moz-transition: 0.3s;
+     -o-transition: 0.3s;
+     transition: 0.3s;
+}
+a:hover {
+	text-decoration: none;
+	color: #e74c3c;
+}
+li:active {
+	text-decoration: none;
+}
+li {
+	list-style: none;
+}
+p {
+	font-size: 14px;
+}
+h1 {
+	font-size: 72px;
+	text-transform: uppercase;
+	font-weight: 700;
+	letter-spacing: 4px;
+}
+h2 {
+	color: #6a6a6a;
+	font-size: 36px;
+	text-transform: uppercase;
+	font-weight: 700;
+	letter-spacing: 4px;
+}
+h3 {
+	font-size: 24px;
+	letter-spacing: 1px;
+}
+h4 {
+	font-size: 18px;
+	font-weight: 600;
+	color: #e74c3c;
+}
+span {
+	color: #e74c3c;	
+}
+
+/*---------------------- GENERAL STYLE ENDS ---------------*/
+
+body {
+	width: 100vw;
+	height: 100vh;
+}
+
+body article {
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -50px;
+    width: 400px;
+    height: 200px;
+    background-color: red;
+}
+
+/*---------------------- SIGN IN STYLE ---------------*/
+
+body {
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+.form-signin {
+	max-width: 330px;
+	padding: 15px;
+	margin: 0 auto;
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+	margin-bottom: 10px;
+}
+.form-signin .checkbox {
+	font-weight: normal;
+}
+.form-signin .form-control {
+	position: relative;
+	height: auto;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 10px;
+	font-size: 16px;
+}
+.form-signin .form-control:focus {
+	z-index: 2;
+}
+.form-signin input[type="email"] {
+	margin-bottom: -1px;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+	margin-bottom: 10px;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+}

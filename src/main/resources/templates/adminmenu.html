@@ -1,0 +1,61 @@
+<html>
+<head>
+    <title>User profile</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="//code.angularjs.org/1.2.20/angular-sanitize.min.js"></script>
+</head>
+
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<body ng-app="adminMenu">
+<div class="container" ng-controller="adminMenuCtrl">
+    <div class="header clearfix">
+        <nav>
+            <ul class="nav nav-pills pull-right">
+                <li role="presentation" class="active"><a href="#">Меню</a></li>
+                <li role="presentation"><a href="/admin">Актуальные заказы</a></li>
+                <li role="presentation"><a href="/addmeal">Добавить товар</a></li>
+                <li role="presentation"><a href="/editmeal">Редактировать товары</a></li>
+                <li role="presentation"><a href="/">Сменить пользователя</a></li>
+            </ul>
+        </nav>
+        <h3 class="text-muted">{{CustomString}}</h3>
+    </div>
+
+    <div class="jumbotron">
+        <h1>Меню</h1>
+        <p class="lead">Просмотрите список блюд и удалите невостребованные</p>
+    </div>
+
+    <div class="row marketing" ng-repeat="meal in menu1">
+        <div class="col-md-3" ng-model="src.photo">
+            <img src="{{meal.photo}}" class="img-responsive" style="margin-top: 20px;">
+        </div>
+        <div class="col-md-2" ng-model="src.mealName" style="margin-top: 20px;">
+            <h3>{{meal.mealName}}</h3>
+        </div>
+        <div class="col-md-1" ng-model="src.price" style="margin-top: 20px;">
+            <h3>{{meal.price}}</h3>
+        </div>
+        <div class="col-md-4" ng-model="src.description" style="margin-top: 40px;">
+            <p>{{meal.description}}</p>
+        </div>
+        <div class="col-md-2 btn btn-lg btn-danger" ng-click="deleteMeal(meal)" style="margin-top: 20px;">
+            <p>Удалить</p>
+        </div>
+    </div>
+
+</div> <!-- /container -->
+
+
+
+
+<script src="js/adminmenu.js"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<html>
+<head>
+    <title>Edit Meal</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="//code.angularjs.org/1.2.20/angular-sanitize.min.js"></script>
+</head>
+
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<body ng-app="editcurrentmeal">
+<div class="container" ng-controller="editcurrentmealCtrl">
+    <div class="header clearfix">
+        <nav>
+            <ul class="nav nav-pills pull-right">
+                <li role="presentation"><a href="/admin">Актуальные заказы</a></li>
+                <li role="presentation"><a href="/addmeal">Добавить товар</a></li>
+                <li role="presentation"><a href="/editmeal">Редактировать товары</a></li>
+                <li role="presentation"><a href="/adminmenu">Меню</a></li>
+                <li role="presentation"><a href="/">Сменить пользователя</a></li>
+            </ul>
+        </nav>
+        <h3 class="text-muted">{{CustomString}}</h3>
+    </div>
+
+    <div class="jumbotron">
+        <h1>Редактирование товара</h1>
+        <p class="lead">Отредактируйте выбранный товар и подтвердите изменения.</p>
+    </div>
+
+    <div class="row marketing">
+        <div class="col-md-3">
+            <img src="{{meal.photo}}" class="img-responsive">
+        </div>
+        <div class="col-md-2">
+            <input class="form-control" ng-model="src.mealName" ng-init="src.mealName='{{meal.mealName}}'" value="{{meal.mealName}}" required>
+        </div>
+        <div class="col-md-1">
+            <input class="form-control" ng-model="src.price" ng-init="src.price='{{meal.price}}'" value={{meal.price}} required>
+        </div>
+        <div class="col-md-4">
+            <input class="form-control" ng-model="src.description" ng-init="src.description='{{meal.description}}'" value={{meal.description}} required>
+        </div>
+        <div class="col-md-2 btn btn-lg btn-success" ng-click="saveEdit()">
+            <p>Сохранить изменения</p>
+        </div>
+    </div>
+
+</div> <!-- /container -->
+
+
+
+
+<script src="js/editCurrentMeal.js"></script>
+</body>
+</html>
